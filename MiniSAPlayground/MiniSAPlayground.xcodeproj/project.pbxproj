@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		90B9637BE503E1D265D1DD86 /* Pods_MiniSAPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894C69FEB5576F3DFEB563F /* Pods_MiniSAPlaygroundTests.framework */; };
+		AF1990456E03DA0C6FC9608E /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D718C9D555A6E52759E790 /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework */; };
+		AF3427B03004C5776EA21423 /* Pods_MiniSAPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42A17BA1D71CB050D1CC91 /* Pods_MiniSAPlayground.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		604488CE2E34194900D9B9FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,24 +30,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1894C69FEB5576F3DFEB563F /* Pods_MiniSAPlaygroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSAPlaygroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6E4B98FBE4681410EBF7FC /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlayground-MiniSAPlaygroundUITests.release.xcconfig"; path = "Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests.release.xcconfig"; sourceTree = "<group>"; };
 		604488C02E34194800D9B9FD /* MiniSAPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniSAPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		604488CD2E34194900D9B9FD /* MiniSAPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSAPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		604488D72E34194900D9B9FD /* MiniSAPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniSAPlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		676EEE14FC037667D8E3DE1C /* Pods-MiniSAPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlayground.release.xcconfig"; path = "Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		6C68C85BBFB14F7035DB0F8E /* Pods-MiniSAPlaygroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlaygroundTests.release.xcconfig"; path = "Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests.release.xcconfig"; sourceTree = "<group>"; };
+		78C205C51AC306DB78FA7482 /* Pods-MiniSAPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlayground.debug.xcconfig"; path = "Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		88D718C9D555A6E52759E790 /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A93BEBB29C202A8C478C140C /* Pods-MiniSAPlaygroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlaygroundTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB42A17BA1D71CB050D1CC91 /* Pods_MiniSAPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniSAPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD482956422DDBF4C5A2AE92 /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniSAPlayground-MiniSAPlaygroundUITests.debug.xcconfig"; path = "Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		604488C22E34194800D9B9FD /* MiniSAPlayground */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MiniSAPlayground;
 			sourceTree = "<group>";
 		};
 		604488D02E34194900D9B9FD /* MiniSAPlaygroundTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MiniSAPlaygroundTests;
 			sourceTree = "<group>";
 		};
 		604488DA2E34194900D9B9FD /* MiniSAPlaygroundUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = MiniSAPlaygroundUITests;
 			sourceTree = "<group>";
 		};
@@ -52,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3427B03004C5776EA21423 /* Pods_MiniSAPlayground.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90B9637BE503E1D265D1DD86 /* Pods_MiniSAPlaygroundTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +89,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1990456E03DA0C6FC9608E /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F2A2A3F18C34F24ED226221 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78C205C51AC306DB78FA7482 /* Pods-MiniSAPlayground.debug.xcconfig */,
+				676EEE14FC037667D8E3DE1C /* Pods-MiniSAPlayground.release.xcconfig */,
+				CD482956422DDBF4C5A2AE92 /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.debug.xcconfig */,
+				5F6E4B98FBE4681410EBF7FC /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.release.xcconfig */,
+				A93BEBB29C202A8C478C140C /* Pods-MiniSAPlaygroundTests.debug.xcconfig */,
+				6C68C85BBFB14F7035DB0F8E /* Pods-MiniSAPlaygroundTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4C008CF47F69107345275DFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB42A17BA1D71CB050D1CC91 /* Pods_MiniSAPlayground.framework */,
+				88D718C9D555A6E52759E790 /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework */,
+				1894C69FEB5576F3DFEB563F /* Pods_MiniSAPlaygroundTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		604488B72E34194800D9B9FD = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +126,8 @@
 				604488D02E34194900D9B9FD /* MiniSAPlaygroundTests */,
 				604488DA2E34194900D9B9FD /* MiniSAPlaygroundUITests */,
 				604488C12E34194800D9B9FD /* Products */,
+				2F2A2A3F18C34F24ED226221 /* Pods */,
+				4C008CF47F69107345275DFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 604488E12E34194900D9B9FD /* Build configuration list for PBXNativeTarget "MiniSAPlayground" */;
 			buildPhases = (
+				3C98C62A488DD16DE0AC5A97 /* [CP] Check Pods Manifest.lock */,
 				604488BC2E34194800D9B9FD /* Sources */,
 				604488BD2E34194800D9B9FD /* Frameworks */,
 				604488BE2E34194800D9B9FD /* Resources */,
+				4A9A9904B04E6A307F524BA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +162,6 @@
 				604488C22E34194800D9B9FD /* MiniSAPlayground */,
 			);
 			name = MiniSAPlayground;
-			packageProductDependencies = (
-			);
 			productName = MiniSAPlayground;
 			productReference = 604488C02E34194800D9B9FD /* MiniSAPlayground.app */;
 			productType = "com.apple.product-type.application";
@@ -121,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 604488E42E34194900D9B9FD /* Build configuration list for PBXNativeTarget "MiniSAPlaygroundTests" */;
 			buildPhases = (
+				7164C62921384F61FAEBC146 /* [CP] Check Pods Manifest.lock */,
 				604488C92E34194900D9B9FD /* Sources */,
 				604488CA2E34194900D9B9FD /* Frameworks */,
 				604488CB2E34194900D9B9FD /* Resources */,
+				57DB0BD2D92E2B07891BF5EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,8 +185,6 @@
 				604488D02E34194900D9B9FD /* MiniSAPlaygroundTests */,
 			);
 			name = MiniSAPlaygroundTests;
-			packageProductDependencies = (
-			);
 			productName = MiniSAPlaygroundTests;
 			productReference = 604488CD2E34194900D9B9FD /* MiniSAPlaygroundTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -144,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 604488E72E34194900D9B9FD /* Build configuration list for PBXNativeTarget "MiniSAPlaygroundUITests" */;
 			buildPhases = (
+				75441709F8563C93F79DA122 /* [CP] Check Pods Manifest.lock */,
 				604488D32E34194900D9B9FD /* Sources */,
 				604488D42E34194900D9B9FD /* Frameworks */,
 				604488D52E34194900D9B9FD /* Resources */,
+				F1EE48E7967A0E7A6A491F69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -157,8 +208,6 @@
 				604488DA2E34194900D9B9FD /* MiniSAPlaygroundUITests */,
 			);
 			name = MiniSAPlaygroundUITests;
-			packageProductDependencies = (
-			);
 			productName = MiniSAPlaygroundUITests;
 			productReference = 604488D72E34194900D9B9FD /* MiniSAPlaygroundUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -230,6 +279,126 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C98C62A488DD16DE0AC5A97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniSAPlayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A9A9904B04E6A307F524BA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57DB0BD2D92E2B07891BF5EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7164C62921384F61FAEBC146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniSAPlaygroundTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75441709F8563C93F79DA122 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1EE48E7967A0E7A6A491F69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		604488BC2E34194800D9B9FD /* Sources */ = {
@@ -392,6 +561,7 @@
 		};
 		604488E22E34194900D9B9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C205C51AC306DB78FA7482 /* Pods-MiniSAPlayground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -405,6 +575,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,14 +583,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = leowirasanto.MiniSAPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		604488E32E34194900D9B9FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 676EEE14FC037667D8E3DE1C /* Pods-MiniSAPlayground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,6 +609,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,14 +617,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = leowirasanto.MiniSAPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		604488E52E34194900D9B9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93BEBB29C202A8C478C140C /* Pods-MiniSAPlaygroundTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +649,7 @@
 		};
 		604488E62E34194900D9B9FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C68C85BBFB14F7035DB0F8E /* Pods-MiniSAPlaygroundTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +669,7 @@
 		};
 		604488E82E34194900D9B9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD482956422DDBF4C5A2AE92 /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,6 +687,7 @@
 		};
 		604488E92E34194900D9B9FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F6E4B98FBE4681410EBF7FC /* Pods-MiniSAPlayground-MiniSAPlaygroundUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

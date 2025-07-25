@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '15.6'
+
+def essentials
+  pod 'Alamofire'
+end
+
+def test_essentials
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'RxBlocking'
+  pod 'SnapshotTesting'
+end
+
+target 'MiniSAPlayground' do
+  use_frameworks!
+  essentials
+
+  target 'MiniSAPlaygroundTests' do
+    inherit! :search_paths
+    test_essentials
+  end
+
+  target 'MiniSAPlaygroundUITests' do
+    test_essentials
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.6'
+    end
+  end
+end
