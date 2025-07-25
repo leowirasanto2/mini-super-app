@@ -1,6 +1,0 @@
-framework module Pods_MiniSAPlaygroundTests {
-  umbrella header "Pods-MiniSAPlaygroundTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
