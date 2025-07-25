@@ -2,9 +2,20 @@
 platform :ios, '17.6'
 
 def essentials
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxRelay'
+  pod 'Kingfisher'
 end
 
 def test_essentials
+  pod 'RxTest'
+  pod 'Quick'
+  pod 'Nimble'
+  pod 'Nimble-Snapshots'
+  pod 'SnapshotTesting'
+  pod 'RxBlocking'
 end
 
 target 'MiniSAPlayground' do
