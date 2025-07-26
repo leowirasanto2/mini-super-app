@@ -48,22 +48,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		604488C22E34194800D9B9FD /* MiniSAPlayground */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MiniSAPlayground;
 			sourceTree = "<group>";
 		};
 		604488D02E34194900D9B9FD /* MiniSAPlaygroundTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MiniSAPlaygroundTests;
 			sourceTree = "<group>";
 		};
 		604488DA2E34194900D9B9FD /* MiniSAPlaygroundUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = MiniSAPlaygroundUITests;
 			sourceTree = "<group>";
 		};
@@ -360,9 +354,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground-MiniSAPlaygroundUITests/Pods-MiniSAPlayground-MiniSAPlaygroundUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,9 +375,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlayground/Pods-MiniSAPlayground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -394,9 +396,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MiniSAPlaygroundTests/Pods-MiniSAPlaygroundTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
