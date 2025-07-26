@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct SecondaryButton: View {
-    enum ButtonState: Equatable {
+    enum ButtonType: Equatable {
         case active
         case negative
         case warning
@@ -77,10 +77,11 @@ struct SecondaryButton: View {
     let action: () -> Void
     let cornerRadius: CGFloat
     let size: Size
-    let buttonState: ButtonState
+    let buttonType: ButtonType
     
     // MARK: - Optional Properties with Default Values
     var borderWidth: CGFloat = 2
+    var isLoading = false
     
     // MARK: - Init
     init(
@@ -88,41 +89,54 @@ struct SecondaryButton: View {
         action: @escaping () -> Void,
         cornerRadius: CGFloat = 8,
         size: Size = .medium,
-        buttonState: ButtonState = .active
+        buttonType: ButtonType = .active
     ) {
         self.title = title
         self.action = action
         self.cornerRadius = cornerRadius
         self.size = size
-        self.buttonState = buttonState
+        self.buttonType = buttonType
     }
     
     // MARK: - Body
     var body: some View {
         Button(action: {
-            if buttonState != .disabled {
+            if buttonType != .disabled || !isLoading {
                 action()
             }
         }) {
-            Text(title)
-                .typography(size.typography)
-                .foregroundColor(buttonState.textColor)
-                .frame(maxWidth: .infinity, minHeight: size.height)
-                .padding(.horizontal, size.horizontalPadding)
-                .background(Color.clear)
-                .overlay(
-                    RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(buttonState.borderColor, lineWidth: borderWidth)
-                )
+            HStack {
+                if isLoading {
+                    ProgressView()
+                } else {
+                    Text(isLoading ? "" : title)
+                        .typography(size.typography)
+                }
+            }
+            .foregroundColor(buttonType.textColor)
+            .frame(maxWidth: .infinity, minHeight: size.height)
+            .padding(.horizontal, size.horizontalPadding)
+            .background(Color.clear)
         }
+        .overlay(
+            RoundedRectangle(cornerRadius: cornerRadius)
+                .stroke(buttonType.borderColor, lineWidth: borderWidth)
+        )
         .cornerRadius(cornerRadius)
-        .disabled(buttonState == .disabled)
+        .disabled(buttonType == .disabled)
     }
     
     // MARK: - Modifiers
     func borderWidth(_ width: CGFloat) -> SecondaryButton {
         var button = self
         button.borderWidth = width
+        return button
+    }
+
+    // MARK: - Loading State
+    func loading(_ isLoading: Bool) -> SecondaryButton {
+        var button = self
+        button.isLoading = isLoading
         return button
     }
 }
@@ -160,21 +174,21 @@ struct SecondaryButton_Previews: PreviewProvider {
                 title: "Disabled Button",
                 action: {},
                 size: .medium,
-                buttonState: .disabled
+                buttonType: .disabled
             )
             
             SecondaryButton(
                 title: "Warning Button",
                 action: {},
                 size: .medium,
-                buttonState: .warning
+                buttonType: .warning
             )
             
             SecondaryButton(
                 title: "Negative Button",
                 action: {},
                 size: .medium,
-                buttonState: .negative
+                buttonType: .negative
             )
             
             SecondaryButton(
@@ -183,6 +197,14 @@ struct SecondaryButton_Previews: PreviewProvider {
                 size: .medium
             )
             .borderWidth(5)
+            
+            SecondaryButton(
+                title: "Submit",
+                action: {},
+                size: .medium
+            )
+            .borderWidth(5)
+            .loading(true)
         }
         .padding()
     }

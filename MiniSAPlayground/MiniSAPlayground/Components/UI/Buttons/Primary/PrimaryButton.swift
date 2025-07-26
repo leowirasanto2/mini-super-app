@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PrimaryButton: View {
-    enum ButtonState: Equatable {
+    enum ButtonType: Equatable {
         case active
         case negative
         case warning
@@ -64,11 +64,12 @@ struct PrimaryButton: View {
     let action: () -> Void
     let cornerRadius: CGFloat
     let size: Size
-    let buttonState: ButtonState
+    let buttonType: ButtonType
     
     // MARK: - Optional Properties with Default Values
     var foregroundColor: Color = ColorToken.labelStaticWhite.color
     var backgroundColor: Color = ColorToken.buttonActive.color
+    var isLoading = false
     
     // MARK: - Init
     init(
@@ -76,31 +77,38 @@ struct PrimaryButton: View {
         action: @escaping () -> Void,
         cornerRadius: CGFloat = 8,
         size: Size = .medium,
-        buttonState: ButtonState = .active
+        buttonType: ButtonType = .active
     ) {
         self.title = title
         self.action = action
         self.cornerRadius = cornerRadius
         self.size = size
-        self.buttonState = buttonState
+        self.buttonType = buttonType
     }
     
     // MARK: - Body
     var body: some View {
         Button(action: {
-            if buttonState != .disabled {
+            if buttonType != .disabled && !isLoading {
                 action()
             }
         }) {
-            Text(title)
-                .typography(size.typography)
-                .colorToken(.labelStaticWhite)
-                .frame(maxWidth: .infinity, minHeight: size.height)
-                .padding(.horizontal, size.horizontalPadding)
+            HStack {
+                if isLoading {
+                    ProgressView()
+                        .tint(ColorToken.labelStaticWhite.color)
+                } else {
+                    Text(title)
+                        .typography(size.typography)
+                        .colorToken(.labelStaticWhite)
+                }
+            }
+            .frame(maxWidth: .infinity, minHeight: size.height)
+            .padding(.horizontal, size.horizontalPadding)
         }
-        .background(buttonState.background)
+        .background(buttonType.background)
         .cornerRadius(cornerRadius)
-        .disabled(buttonState == .disabled)
+        .disabled(buttonType == .disabled || isLoading)
     }
     
     // MARK: - Modifiers
@@ -113,6 +121,13 @@ struct PrimaryButton: View {
     func backgroundColor(_ color: Color) -> PrimaryButton {
         var button = self
         button.backgroundColor = color
+        return button
+    }
+    
+    // MARK: - Loading State
+    func loading(_ isLoading: Bool) -> PrimaryButton {
+        var button = self
+        button.isLoading = isLoading
         return button
     }
 }
@@ -150,8 +165,15 @@ struct PrimaryButton_Previews: PreviewProvider {
                 title: "Disabled Button",
                 action: {},
                 size: .medium,
-                buttonState: .disabled
+                buttonType: .disabled
             )
+            
+            PrimaryButton(
+                title: "Loading Button",
+                action: {},
+                size: .medium
+            )
+            .loading(true)
         }
         .padding()
     }
