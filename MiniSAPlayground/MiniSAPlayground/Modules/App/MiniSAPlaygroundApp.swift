@@ -12,6 +12,8 @@ struct MiniSAPlaygroundApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(InfoSheetController())
+                .environmentObject(AppController())
         }
     }
 }
