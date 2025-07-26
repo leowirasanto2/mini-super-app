@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60A7D7192E34B4D800F00D21 /* Nebula in Frameworks */ = {isa = PBXBuildFile; productRef = 60A7D7182E34B4D800F00D21 /* Nebula */; };
 		90B9637BE503E1D265D1DD86 /* Pods_MiniSAPlaygroundTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1894C69FEB5576F3DFEB563F /* Pods_MiniSAPlaygroundTests.framework */; };
 		AF1990456E03DA0C6FC9608E /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D718C9D555A6E52759E790 /* Pods_MiniSAPlayground_MiniSAPlaygroundUITests.framework */; };
 		AF3427B03004C5776EA21423 /* Pods_MiniSAPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42A17BA1D71CB050D1CC91 /* Pods_MiniSAPlayground.framework */; };
@@ -68,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3427B03004C5776EA21423 /* Pods_MiniSAPlayground.framework in Frameworks */,
+				60A7D7192E34B4D800F00D21 /* Nebula in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +240,9 @@
 			);
 			mainGroup = 604488B72E34194800D9B9FD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				60A7D7172E34B4D800F00D21 /* XCRemoteSwiftPackageReference "Nebula" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 604488C12E34194800D9B9FD /* Products */;
 			projectDirPath = "";
@@ -755,6 +760,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60A7D7172E34B4D800F00D21 /* XCRemoteSwiftPackageReference "Nebula" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leowirasanto2/Nebula";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60A7D7182E34B4D800F00D21 /* Nebula */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60A7D7172E34B4D800F00D21 /* XCRemoteSwiftPackageReference "Nebula" */;
+			productName = Nebula;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 604488B82E34194800D9B9FD /* Project object */;
 }

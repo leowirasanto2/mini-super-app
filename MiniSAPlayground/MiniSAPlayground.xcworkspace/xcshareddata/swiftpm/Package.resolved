@@ -1,0 +1,15 @@
+{
+  "originHash" : "62107db33569f5cf5d9e4bbc235e349043d4be160cef32cc967e18a9bb1b1384",
+  "pins" : [
+    {
+      "identity" : "nebula",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/leowirasanto2/Nebula",
+      "state" : {
+        "revision" : "aeef1fbeb7e22ec3e210a2d8b274876c799fa7d3",
+        "version" : "1.0.1"
+      }
+    }
+  ],
+  "version" : 3
+}

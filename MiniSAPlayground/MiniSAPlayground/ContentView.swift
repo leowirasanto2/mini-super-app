@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Nebula
 
 struct ContentView: View {
     var body: some View {
