@@ -1,5 +1,5 @@
 //
-//  PrimaryButton.swift
+//  SecondaryButton.swift
 //  MiniSAPlayground
 //
 //  Created by Leo Wirasanto Laia on 26/07/25.
@@ -8,14 +8,27 @@
 import Foundation
 import SwiftUI
 
-struct PrimaryButton: View {
+struct SecondaryButton: View {
     enum ButtonState: Equatable {
         case active
         case negative
         case warning
         case disabled
         
-        var background: Color {
+        var borderColor: Color {
+            switch self {
+            case .active:
+                return ColorToken.buttonActive.color
+            case .negative:
+                return ColorToken.buttonNegative.color
+            case .warning:
+                return ColorToken.buttonWarning.color
+            case .disabled:
+                return ColorToken.buttonDisabled.color
+            }
+        }
+        
+        var textColor: Color {
             switch self {
             case .active:
                 return ColorToken.buttonActive.color
@@ -42,11 +55,11 @@ struct PrimaryButton: View {
             }
         }
         
-        var horizontalPadding: Spacing {
+        var horizontalPadding: CGFloat {
             switch self {
-            case .small: return .small
-            case .medium: return .medium
-            case .large: return .large
+            case .small: return 12
+            case .medium: return 16
+            case .large: return 20
             }
         }
         
@@ -67,8 +80,7 @@ struct PrimaryButton: View {
     let buttonState: ButtonState
     
     // MARK: - Optional Properties with Default Values
-    var foregroundColor: Color = ColorToken.labelStaticWhite.color
-    var backgroundColor: Color = ColorToken.buttonActive.color
+    var borderWidth: CGFloat = 2
     
     // MARK: - Init
     init(
@@ -94,64 +106,83 @@ struct PrimaryButton: View {
         }) {
             Text(title)
                 .typography(size.typography)
-                .colorToken(.labelStaticWhite)
+                .foregroundColor(buttonState.textColor)
                 .frame(maxWidth: .infinity, minHeight: size.height)
                 .padding(.horizontal, size.horizontalPadding)
+                .background(Color.clear)
+                .overlay(
+                    RoundedRectangle(cornerRadius: cornerRadius)
+                        .stroke(buttonState.borderColor, lineWidth: borderWidth)
+                )
         }
-        .background(buttonState.background)
         .cornerRadius(cornerRadius)
         .disabled(buttonState == .disabled)
     }
     
     // MARK: - Modifiers
-    func foregroundColor(_ color: Color) -> PrimaryButton {
+    func borderWidth(_ width: CGFloat) -> SecondaryButton {
         var button = self
-        button.foregroundColor = color
-        return button
-    }
-    
-    func backgroundColor(_ color: Color) -> PrimaryButton {
-        var button = self
-        button.backgroundColor = color
+        button.borderWidth = width
         return button
     }
 }
 
 // MARK: - Preview
-struct PrimaryButton_Previews: PreviewProvider {
+struct SecondaryButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: Spacing.default) {
-            PrimaryButton(
+            SecondaryButton(
                 title: "Small Button",
                 action: {},
                 size: .small
             )
             
-            PrimaryButton(
+            SecondaryButton(
                 title: "Medium Button",
                 action: {},
                 size: .medium
             )
             
-            PrimaryButton(
+            SecondaryButton(
                 title: "Large Button",
                 action: {},
                 size: .large
             )
             
-            PrimaryButton(
+            SecondaryButton(
                 title: "Custom Radius",
                 action: {},
                 cornerRadius: 20,
                 size: .medium
             )
             
-            PrimaryButton(
+            SecondaryButton(
                 title: "Disabled Button",
                 action: {},
                 size: .medium,
                 buttonState: .disabled
             )
+            
+            SecondaryButton(
+                title: "Warning Button",
+                action: {},
+                size: .medium,
+                buttonState: .warning
+            )
+            
+            SecondaryButton(
+                title: "Negative Button",
+                action: {},
+                size: .medium,
+                buttonState: .negative
+            )
+            
+            SecondaryButton(
+                title: "Thick Border",
+                action: {},
+                size: .medium
+            )
+            .borderWidth(5)
         }
         .padding()
     }
