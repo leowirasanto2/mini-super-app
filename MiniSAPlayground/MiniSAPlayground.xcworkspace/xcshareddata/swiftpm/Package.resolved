@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leowirasanto2/Nebula",
       "state" : {
-        "revision" : "bc2e4b49309b0a18791ae93571d89012d4ee8923",
-        "version" : "1.2.0"
+        "revision" : "fc76eaad1f2ddc57aed480b20d881b621b29fcd5",
+        "version" : "1.2.1"
       }
     }
   ],
