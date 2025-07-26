@@ -1,2 +1,2 @@
 cd "${ROOT:-$(cd "$(dirname "$0")/.." && pwd)}/MiniSAPlayground" && \
-xcodebuild -workspace MiniSAPlayground.xcworkspace -scheme MiniSAPlayground -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 14"
+xcodebuild -workspace MiniSAPlayground.xcworkspace -scheme MiniSAPlayground -configuration Debug -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 16 Pro"
