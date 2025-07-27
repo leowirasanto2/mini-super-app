@@ -69,10 +69,17 @@ struct SignupScreen: View {
             }
         }
         .paddingHorizontal(.regular)
+        .onChange(of: usernameText) { _, _ in
+            validateForm()
+        }
+        .onChange(of: emailText) { _, _ in
+            validateForm()
+        }
         .onChange(of: passwordText) { _, newValue in
             withAnimation {
                 isValidatePasswordFieldAppear = passwordText.count >= 6
             }
+            validateForm()
         }
         .onChange(of: passwordValidateText) { _, _ in
             validateForm()
