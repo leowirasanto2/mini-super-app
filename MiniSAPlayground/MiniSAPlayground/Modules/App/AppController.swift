@@ -6,16 +6,35 @@
 //
 
 import Combine
+import Foundation
 
 final class AppController: ObservableObject {
     @Published var isLoggedIn: Bool = false
+    @Published var isShowingToast: Bool = false
+    @Published var toastMessage = ""
+    
+    @Published var registeredUsername: String?
+    @Published var registeredPassword: String?
 
     func setUserLoggedIn() {
-        print("++++")
         isLoggedIn = true
     }
 
     func setUserLoggedOut() {
         isLoggedIn = false
+    }
+    
+    func showToast(message: String) {
+        isShowingToast = true
+        toastMessage = message
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.isShowingToast = false
+            self.toastMessage = ""
+        }
+    }
+    
+    func updateRegisteredUser(username: String, password: String) {
+        registeredUsername = username
+        registeredPassword = password
     }
 }

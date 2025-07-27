@@ -13,6 +13,7 @@ struct LoginFormView: View {
     @State var usernameText: String = ""
     @State var passwordText: String = ""
     @State var isLoggingIn = false
+    @State var loginFailedMessage: String?
     @Binding var path: NavigationPath
     @EnvironmentObject var sheetController: InfoSheetController
     @EnvironmentObject var appController: AppController
@@ -58,7 +59,17 @@ struct LoginFormView: View {
                 }
             }
         }
-        .frame(width: UIScreen.main.bounds.width * 0.7)
+        .paddingHorizontal(.regular)
+        .onAppear {
+            if let username = appController.registeredUsername {
+                self.usernameText = username
+            }
+        }
+        .onChange(of: loginFailedMessage) { _, _ in
+            if let message = loginFailedMessage {
+                appController.showToast(message: message)
+            }
+        }
     }
     
     private func signIn() {
@@ -71,6 +82,11 @@ struct LoginFormView: View {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             isLoggingIn = false
+            guard passwordText == appController.registeredPassword else {
+                loginFailedMessage = "Incorrect password :("
+                return
+            }
+            loginFailedMessage = nil
             path.removeLast()
             appController.setUserLoggedIn()
         }

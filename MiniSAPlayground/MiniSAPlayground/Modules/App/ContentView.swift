@@ -15,49 +15,54 @@ struct ContentView: View {
     @State private var isSplashScreenFinished = false
     
     var body: some View {
-        NavigationStack(path: $path) {
-            VStack(spacing: .regular) {
-                if appController.isLoggedIn {
-                    Text("This is landing page")
-                    
-                    SecondaryButton(title: "Logout") {
-                        withAnimation {
-                            appController.setUserLoggedOut()
-                        }
-                    }
-                    .paddingHorizontal(.regular)
-                } else {
-                    if !isSplashScreenFinished {
-                        ZStack {
-                            NebulaIllustration.beingCreative.image
-                            VStack {
-                                Spacer()
-                                Text("v1.0.0")
-                                    .typography(.captionRegular)
-                                    .colorToken(.labelDisabled)
-                                    .padding(.large)
+        ZStack {
+            NavigationStack(path: $path) {
+                VStack(spacing: .regular) {
+                    if appController.isLoggedIn {
+                        Text("This is landing page")
+                        
+                        SecondaryButton(title: "Logout") {
+                            withAnimation {
+                                appController.setUserLoggedOut()
                             }
                         }
+                        .paddingHorizontal(.regular)
                     } else {
-                        LoginScreen(
-                            path: $path
-                        )
+                        if !isSplashScreenFinished {
+                            ZStack {
+                                NebulaIllustration.beingCreative.image
+                                VStack {
+                                    Spacer()
+                                    Text("v1.0.0")
+                                        .typography(.captionRegular)
+                                        .colorToken(.labelDisabled)
+                                        .padding(.large)
+                                }
+                            }
+                        } else {
+                            LoginScreen(
+                                path: $path
+                            )
+                        }
+                    }
+                }
+                .navigationDestination(for: Screen.self) { screen in
+                    switch screen {
+                    case .loginForm:
+                        LoginFormView(path: $path)
+                    case .signupForm:
+                        SignupScreen(path: $path)
+                    default:
+                        Text("Unavailable screen")
+                            .onAppear {
+                                sheetController.presentUnavailableFeature()
+                            }
                     }
                 }
             }
-            .navigationDestination(for: Screen.self) { screen in
-                let _ = print("Screen \(screen)")
-                switch screen {
-                case .loginForm:
-                    LoginFormView(
-                        path: $path
-                    )
-                default:
-                    Text("Unavailable screen")
-                        .onAppear {
-                            sheetController.presentUnavailableFeature()
-                        }
-                }
+            
+            if appController.isShowingToast {
+                toastView
             }
         }
         .onAppear(perform: {
@@ -84,6 +89,22 @@ struct ContentView: View {
             .environmentObject(sheetController)
             .presentationDetents([.height(380)])
         }
+    }
+    
+    private var toastView: some View {
+        VStack {
+            Spacer()
+            Text(appController.toastMessage)
+                .typography(.bodyMedium)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.regular)
+                .background(ColorToken.labelStaticWhite.color)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .shadow(color: ColorToken.buttonActive.color, radius: 1)
+        }
+        .padding(.regular)
+        .transition(.move(edge: .bottom).combined(with: .opacity))
+        .animation(.easeInOut, value: appController.isShowingToast)
     }
 }
 
