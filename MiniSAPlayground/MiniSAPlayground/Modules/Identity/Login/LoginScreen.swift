@@ -39,10 +39,7 @@ struct LoginScreen: View {
                 SecondaryButton(
                     title: "Sign Up",
                     action: {
-                        //TODO: add signup action
-                        DispatchQueue.main.async {
-                            sheetController.presentUnavailableFeature()
-                        }
+                        path.append(Screen.signupForm)
                     },
                     cornerRadius: .infinity,
                     buttonType: .active)
