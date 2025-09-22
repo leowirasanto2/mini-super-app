@@ -53,7 +53,7 @@ struct InfoSheet<Content: View>: View {
                 .paddingVertical(.regular)
             }
         }
-        .background(ColorToken.backgroundDefault.color)
+        .background(ColorToken.backgroundPrimary.color)
     }
 }
 

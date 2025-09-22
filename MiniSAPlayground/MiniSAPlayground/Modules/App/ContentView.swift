@@ -35,7 +35,7 @@ struct ContentView: View {
                                     Spacer()
                                     Text("v1.0.0")
                                         .typography(.captionRegular)
-                                        .colorToken(.labelDisabled)
+                                        .colorToken(.typographyDisabled)
                                         .padding(.large)
                                 }
                             }
@@ -98,9 +98,9 @@ struct ContentView: View {
                 .typography(.bodyMedium)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.regular)
-                .background(ColorToken.labelStaticWhite.color)
+                .background(ColorToken.staticWhite.color)
                 .clipShape(RoundedRectangle(cornerRadius: 8))
-                .shadow(color: ColorToken.buttonActive.color, radius: 1)
+                .shadow(color: ColorToken.buttonPositive.color, radius: 1)
         }
         .padding(.regular)
         .transition(.move(edge: .bottom).combined(with: .opacity))

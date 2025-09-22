@@ -33,8 +33,7 @@ struct LoginScreen: View {
                         path.append(Screen.loginForm)
                     },
                     cornerRadius: .infinity,
-                    size: .medium,
-                    buttonType: .active)
+                    size: .medium)
 
                 SecondaryButton(
                     title: "Sign Up",
@@ -42,7 +41,7 @@ struct LoginScreen: View {
                         path.append(Screen.signupForm)
                     },
                     cornerRadius: .infinity,
-                    buttonType: .active)
+                    buttonType: .defaultButton)
             }
             .paddingVertical(.regular)
             .frame(width: UIScreen.main.bounds.width * 0.7)

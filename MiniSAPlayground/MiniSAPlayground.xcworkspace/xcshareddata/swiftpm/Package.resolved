@@ -2,12 +2,21 @@
   "originHash" : "62107db33569f5cf5d9e4bbc235e349043d4be160cef32cc967e18a9bb1b1384",
   "pins" : [
     {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "2ef543ee21d63734e1c004ad6c870255e8716c50",
+        "version" : "7.12.0"
+      }
+    },
+    {
       "identity" : "nebula",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leowirasanto2/Nebula",
       "state" : {
-        "revision" : "fc76eaad1f2ddc57aed480b20d881b621b29fcd5",
-        "version" : "1.2.1"
+        "revision" : "f09c33fe46723bfa3be722519f5157be9f65f3af",
+        "version" : "2.0.6"
       }
     }
   ],

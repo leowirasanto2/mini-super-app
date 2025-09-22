@@ -41,8 +41,7 @@ struct LoginFormView: View {
                         signIn()
                     },
                     cornerRadius: .infinity,
-                    size: .medium,
-                    buttonType: .active
+                    size: .medium
                 )
                 .loading(isLoggingIn)
                 
@@ -54,7 +53,7 @@ struct LoginFormView: View {
                         },
                         cornerRadius: .infinity,
                         size: .medium,
-                        buttonType: .active
+                        buttonType: .defaultButton
                     )
                 }
             }
